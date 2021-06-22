@@ -4,19 +4,19 @@ import carousel1 from '../../assets/carousel1.jpg';
 import carousel2 from '../../assets/carousel2.jpg';
 import carousel3 from '../../assets/carousel3.jpg';
 import './landing.css';
+import TopDeals from './TopDeals';
 
 function Landing() {
-  function onChange(a, b, c) {
-    console.log(a, b, c);
-  }
+
   return (
+    <>
     <div>
       <Breadcrumb style={{ margin: '16px 0' }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>List</Breadcrumb.Item>
         <Breadcrumb.Item>App</Breadcrumb.Item>
       </Breadcrumb>
-      <Carousel afterChange={onChange} autoplay>
+      <Carousel autoplay>
         <div>
           <img src={carousel3} className="carousel" alt="img"/>
         </div>
@@ -31,6 +31,9 @@ function Landing() {
         </div>
       </Carousel>
     </div>
+    <br />
+    <TopDeals/>
+    </>
   )
 }
 
