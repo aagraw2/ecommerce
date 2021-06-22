@@ -1,14 +1,11 @@
 import React from 'react'
 import { Breadcrumb, Carousel } from 'antd';
+import carousel1 from '../../assets/carousel1.jpg';
+import carousel2 from '../../assets/carousel2.jpg';
+import carousel3 from '../../assets/carousel3.jpg';
+import './landing.css';
 
 function Landing() {
-  const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
   function onChange(a, b, c) {
     console.log(a, b, c);
   }
@@ -21,16 +18,16 @@ function Landing() {
       </Breadcrumb>
       <Carousel afterChange={onChange} autoplay>
         <div>
-          <h3 style={contentStyle}>1</h3>
+          <img src={carousel3} className="carousel" alt="img"/>
         </div>
         <div>
-          <h3 style={contentStyle}>2</h3>
+        <img src={carousel2} className="carousel" alt="img"/>
         </div>
         <div>
-          <h3 style={contentStyle}>3</h3>
+        <img src={carousel1} className="carousel" alt="img"/>
         </div>
         <div>
-          <h3 style={contentStyle}>4</h3>
+        <img src={carousel2} className="carousel" alt="img"/>
         </div>
       </Carousel>
     </div>
